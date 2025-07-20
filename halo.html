@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapaan dari Arkan</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #0077b6;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 60%;
+            border: 2px solid #0077b6;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #023e8a;
+        }
+        .output {
+            margin-top: 30px;
+            font-size: 1.3em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Halo, Boleh Aku Kenalan?</h1>
+
+    <input type="text" id="namaInput" placeholder="Tulis namamu di sini...">
+    <br>
+    <button onclick="sapaPengguna()">Sapa Aku!</button>
+
+    <div class="output" id="hasilSapa"></div>
+
+    <script>
+        function sapaPengguna() {
+            const nama = document.getElementById('namaInput').value;
+            const hasil = document.getElementById('hasilSapa');
+
+            if(nama.trim() === "") {
+                hasil.textContent = "Eh, siapa namamu? Jangan malu-malu dong 😁";
+            } else {
+                hasil.textContent = `Hai, ${nama}! Kamu keren banget! 🌟`;
+            }
+        }
+    </script>
+
+</body>
+</html>
